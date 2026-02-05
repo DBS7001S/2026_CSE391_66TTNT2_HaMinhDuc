@@ -1,0 +1,106 @@
+/* Tổng thể trang */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Tiêu đề các phần có đường kẻ ngang */
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Cấu trúc dòng: Label bên trái, Input bên phải */
+label {
+    display: inline-block;
+    width: 150px; /* Độ rộng cột label */
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: 350px;
+    padding: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+/* Tùy chỉnh riêng cho các cụm Radio và Checkbox */
+.genderform, .psform {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.genderoption, .psoption {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.genderoption label, .psoption label {
+    width: auto;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.genderoption input, .psoption input {
+    margin-bottom: 5px;
+}
+
+/* Khu vực Note (Textarea) */
+textarea {
+    height: 100px;
+    font-family: inherit;
+}
+
+/* Captcha */
+img[alt="captcha"] {
+    display: block;
+    margin: 5px 0 5px 150px; /* Thụt lề để thẳng hàng với input */
+}
+
+#captcha {
+    margin-left: 150px;
+}
+
+/* Nút bấm ở cuối */
+.buttons-container {
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+input[type="submit"], 
+input[type="button"] {
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type="button"] {
+    background-color: #777;
+}
