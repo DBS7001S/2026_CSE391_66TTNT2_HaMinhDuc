@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="input-group">
+            <input type="text" id="nameInput" placeholder="Họ tên sinh viên">
+            <input type="number" id="scoreInput" placeholder="Điểm" min="0" max="10">
+            <button id="addBtn">Thêm</button>
+        </div>
+
+        <!-- Bo sung bai 1.2 -->
+        <div class="filter-group" style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <input type="text" id="searchInput" placeholder="Tìm tên sinh viên..." style="flex: 2;">
+        <select id="filterRank" style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ddd;">
+            <option value="Tất cả">Tất cả xếp loại</option>
+            <option value="Giỏi">Giỏi</option>
+            <option value="Khá">Khá</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Yếu">Yếu</option>
+        </select>
+        </div>
+        <!-- Bo sung bai 1.2 -->
+
+        <table border="1" id="studentTable">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th id="scoreCol" style="cursor: pointer;">Điểm ↕</th> <th>Xếp loại</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="studentBody">
+                </tbody>
+        </table>
+        <div class="stats">
+            <p>Tổng số sinh viên: <span id="totalStudents">0</span></p>
+            <p>Điểm trung bình lớp: <span id="avgScore">0</span></p>
+        </div>
+    </div> 
+    <script src="scripts.js"> </script>
+
+    
+</body>
+</html>

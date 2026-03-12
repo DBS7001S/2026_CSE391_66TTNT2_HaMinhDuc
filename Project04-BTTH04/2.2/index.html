@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đặt Hàng Nâng Cao</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="order-form-container">
+        <h2>🛒 ĐẶT HÀNG TRỰC TUYẾN</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label>Sản phẩm</label>
+                <select id="product">
+                    <option value="">-- Chọn sản phẩm --</option>
+                    <option value="laptop">Laptop (100.000.000đ)</option>
+                    <option value="phone">Phone (200.000.000đ)</option>
+                    <option value="watch">Watch (300.000.000đ)</option>
+                </select>
+                <span class="error" id="err-product"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Số lượng (1-99)</label>
+                <input type="number" id="quantity" placeholder="Nhập số lượng">
+                <span class="error" id="err-quantity"></span>
+            </div>
+
+            <div class="total-display">
+                Tổng cộng: <span id="total-price">0đ</span>
+            </div>
+
+            <div class="form-group">
+                <label>Ngày giao hàng</label>
+                <input type="date" id="delivery-date">
+                <span class="error" id="err-delivery-date"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Địa chỉ giao hàng</label>
+                <textarea id="address" rows="2"></textarea>
+                <span class="error" id="err-address"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Ghi chú (Tùy chọn)</label>
+                <textarea id="note" rows="3" maxlength="250"></textarea>
+                <div id="char-count">0/200</div>
+                <span class="error" id="err-note"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Phương thức thanh toán</label>
+                <div class="radio-group">
+                    <input type="radio" name="payment" value="COD" id="cod"> <label for="cod">COD</label>
+                    <input type="radio" name="payment" value="Chuyển khoản" id="bank"> <label for="bank">Chuyển khoản</label>
+                    <input type="radio" name="payment" value="Ví điện tử" id="wallet"> <label for="wallet">Ví điện tử</label>
+                </div>
+                <span class="error" id="err-payment"></span>
+            </div>
+
+            <button type="submit" id="btn-submit">Đặt hàng ngay</button>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="confirm-modal">
+        <h3>Xác nhận đơn hàng?</h3>
+        <div id="summary-content"></div>
+        <div class="modal-buttons">
+            <button id="btn-confirm-yes">Xác nhận</button>
+            <button id="btn-confirm-no">Hủy</button>
+        </div>
+    </div>
+
+    <div id="final-success">
+        🎉 Đặt hàng thành công! Cảm ơn bạn.
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
