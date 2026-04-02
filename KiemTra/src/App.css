@@ -1,0 +1,144 @@
+/* Reset cơ bản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f9;
+  color: #1a1d23;
+}
+
+.container {
+  padding: 20px 50px;
+}
+
+/* --- Header & Navbar --- */
+header {
+  background-color: #1a1d23;
+  color: rgb(0, 0, 0);
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.search-bar {
+  display: flex;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* --- Bảng danh sách --- */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #fafafa;
+  font-weight: 600;
+}
+
+/* Button màu sắc theo mẫu */
+.btn-add { background: #2563eb; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+
+/* --- Modal (Pop-up Form) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  width: 600px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: #0066ff;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-body {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia làm 2 cột như ảnh */
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group input, .form-group select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #1a1d23;
+}
+
+.full-width { grid-column: span 2; } /* Cho những dòng chiếm hết 2 cột */
+
+.gender-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #eee;
+}
+
+input{
+  background-color: #ffffff;
+}
+h2{
+  color: #1a1d23;
+}
+
+.btn-save { background: #059669; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-right: 10px; }
+.btn-cancel { background: #6b7280; color: white; border: none; padding: 8px 20px; border-radius: 4px; }
